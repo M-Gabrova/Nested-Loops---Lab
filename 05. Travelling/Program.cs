@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _05._Travelling
 {
@@ -7,19 +7,22 @@ namespace _05._Travelling
         static void Main(string[] args)
         {
             string input;
-            string destination; ;
-            int budget;
+            //string input = Console.ReadLine();            
+            string destination;
+            double budget;
 
             input = Console.ReadLine();
 
-            while (input!="End")
+            while (input != "End")
             {
                 destination = input;
-                budget = int.Parse(Console.ReadLine());
+                budget = double.Parse(Console.ReadLine());
+                double savedMoney = 0;
 
-                while (budget > 0)
+                while (savedMoney < budget)
                 {
-                    budget -= int.Parse(Console.ReadLine());
+                    double currentMoney = double.Parse(Console.ReadLine());
+                    savedMoney += currentMoney;
                 }
 
                 Console.WriteLine($"Going to {destination}!");
